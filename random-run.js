@@ -28,5 +28,11 @@ $(document).ready(function(){
     // Append images to the 'images' div
     $("#images").append("<img src='" + skinImage + "' alt='Skin Image'>");
     $("#images").append("<img src='" + deathImage + "' alt='Death Image'>");
+    
+    $(document).ready(function() {
+  setTimeout(function() {
+    $("body").addClass("active");
+  }, 3000); // 3000 milliseconds = 3 seconds
+});
  });
 });
