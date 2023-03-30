@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 
-  var csvUrl = "https://github.com/kevinthegoose/7-99waystodie/blob/main/spelunkycsv%20-%20spelunkycsv.csv"
+  var csvUrl = "https://raw.githubusercontent.com/kevinthegoose/7-99waystodie/main/spelunkycsv.csv"
 
   $.get(csvUrl, function(csvString) {
     var rows = Papa.parse(csvString).data; // Using PapaParse library to parse CSV data
