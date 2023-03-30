@@ -17,9 +17,12 @@ $(document).ready(function() {
     // Create the text to display
     var text = "Dan died on <span class='highlight'>" + date + "</span> on Run # <span class='highlight'>" + runNumber + "</span> on Floor # <span class='highlight'>" + floorNumber + "</span> because of the Piece of Piece <span class='highlight'>" + deathCause + "</span>. Dan was using the <span class='highlight'>" + skin + "</span> Skin and the run took <span class='highlight'>" + runLength + "</span> before Dan met his final demise";
     
-    // Append the text to the 'attempt' div
-    $("#attempt").append("<p>" + text + "</p>");
-
+    // Add a 2 second delay before appending the text to the 'attempt' div
+    setTimeout(function() {
+      $("#attempt").append("<p>" + text + "</p>");
+    }, 2000);
+    
+   
     // Extract image URLs
     var skinImage = randomRow[headers.indexOf("Skin Image")];
     var deathImage = randomRow[headers.indexOf("Cause of Run End Image")];
