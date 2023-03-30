@@ -17,10 +17,16 @@
         margin: 0 auto;
       }
       
-      #images {
-  margin-top: 20px;
+   #images-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#images {
+  margin-top: 20px;
+  display: flex;
 }
 
 #images img {
@@ -45,6 +51,7 @@
   <body>
     <div class="container">
       <div id="attempt"></div>
+      <br>
       <div id="images"></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
