@@ -29,35 +29,21 @@
           height: 406px;
       }
       .highlight {
-  color: #FF0000;
+      color: #FF0000;
 }
    
-     .fade-in {
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
-      }
-      
-      .fade-in.active {
-        opacity: 1;
-      }
-      
+   
     
     </style>
   </head>
   <body>
   
-    <div id="attempt" class="fade-in"></div>
-    <div id="images" class="fade-in"></div>
+    <div id="attempt"></div>
+    <div id="images"></div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
     <script src="random-run.js"></script>
-    <script>
-      $(document).ready(function() {
-        setTimeout(function() {
-          $("#attempt, #images").addClass("active");
-        }, 3000); // 3000 milliseconds = 3 seconds
-      });
-    </script>
+    
     
   </body>
 </html>
