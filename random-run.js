@@ -28,8 +28,8 @@ $(document).ready(function() {
     var deathImage = randomRow[headers.indexOf("Cause of Run End Image")];
     
     // Append images to the 'images' div
-    $("#images").append("<img src='" + skinImage + "' alt='Skin Image'>");
-    $("#images").append("<img src='" + deathImage + "' alt='Death Image'>");
+    $("#images").append("<img src='" + skinImage + "' alt='Skin Image' style="width: 288px; height: 406px;">");
+    $("#images").append("<img src='" + deathImage + "' alt='Death Image' style="width: 288px; height: 406px;">");
     
     
 });
