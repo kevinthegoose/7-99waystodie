@@ -1,8 +1,5 @@
 $(document).ready(function() {
-  setTimeout(function() {
-    $("body").addClass("active");
-  }, 3000); // 3000 milliseconds = 3 seconds
-
+  
   var csvUrl = "https://raw.githubusercontent.com/kevinthegoose/7-99waystodie/main/spelunkycsv.csv"
 
   $.get(csvUrl, function(csvString) {
