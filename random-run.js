@@ -25,7 +25,7 @@ $(document).ready(function() {
     var deathImage = randomRow[headers.indexOf("Cause of Run End Image")];
     
     // Append images to the 'images' div with fade in effect and 2 seconds delay
-    $("#images").append("<img src='" + skinImage + "' alt='Skin Image'>").hide().delay(1500).fadeIn();
+    $("#images").append("<img src='" + skinImage + "' alt='Skin Image'>").hide().delay(1500).fadeIn(5);
     $("#images").append("<img src='" + deathImage + "' alt='Death Image'>").hide().delay(2000).fadeIn();
     
 
