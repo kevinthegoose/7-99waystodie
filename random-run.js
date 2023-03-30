@@ -28,6 +28,26 @@ $(document).ready(function() {
     $("#images").append("<img src='" + skinImage + "' alt='Skin Image'>").hide().delay(1500).fadeIn();
     $("#images").append("<img src='" + deathImage + "' alt='Death Image'>").hide().delay(2000).fadeIn();
     
+
+
+  // create a button element
+  var button = document.createElement("button");
+  button.innerHTML = "Show Me Another Random Death";
+  
+  // add a click event listener to refresh the page
+  button.addEventListener("click", function() {
+    location.reload();
+  });
+  
+  // set a timeout to display the button after 3 seconds
+  setTimeout(function() {
+    // get the container element
+    var container = document.querySelector(".container");
+    // add the button to the container
+    container.appendChild(button);
+  }, 3000);
+
+
   });
   
 });
