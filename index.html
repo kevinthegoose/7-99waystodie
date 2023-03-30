@@ -4,21 +4,7 @@
     <title>Spelunky Run</title>
     <style>
       
-      /* set opacity to 0 for both the text and images */
-  #attempt, #images img {
-    opacity: 0;
-  }
-
-  /* add a transition effect for opacity */
-  #attempt, #images img {
-    transition: opacity 1s ease-in-out;
-  }
-
-  /* set opacity to 1 when the text and images are scrolled into view */
-  #attempt.in-view, #images img.in-view {
-    opacity: 1;
-  }
-      
+  
       body {
         background-color: #333;
         color: #fff;
@@ -45,35 +31,33 @@
       .highlight {
   color: #FF0000;
 }
+   
+     .fade-in {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+      
+      .fade-in.active {
+        opacity: 1;
+      }
+      
+    
     </style>
   </head>
   <body>
-    <div id="attempt"></div>
-    <div id="images"></div>
+  
+    <div id="attempt" class="fade-in"></div>
+    <div id="images" class="fade-in"></div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
     <script src="random-run.js"></script>
     <script>
-    $(document).ready(function() {
-      // check if an element is in view
-      function isScrolledIntoView(elem) {
-        var docViewTop = $(window).scrollTop();
-        var docViewBottom = docViewTop + $(window).height();
-        var elemTop = $(elem).offset().top;
-        var elemBottom = elemTop + $(elem).height();
-
-        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-      }
-
-      // fade in text and images when they are scrolled into view
-      $(window).scroll(function() {
-        $('#attempt, #images img').each(function() {
-          if (isScrolledIntoView(this) === true) {
-            $(this).addClass('in-view');
-          }
-        });
+      $(document).ready(function() {
+        setTimeout(function() {
+          $("#attempt, #images").addClass("active");
+        }, 3000); // 3000 milliseconds = 3 seconds
       });
-    });
-  </script>
+    </script>
+    
   </body>
 </html>
