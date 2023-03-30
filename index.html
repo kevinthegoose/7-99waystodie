@@ -31,12 +31,19 @@
       .highlight {
       color: #FF0000;
 }
-   
+      .fade-in {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+}
+
+      .fade-in.active {
+      opacity: 1;
+}
    
     
     </style>
   </head>
-  <body>
+  <body class="fade in">
   
     <div id="attempt"></div>
     <div id="images"></div>
