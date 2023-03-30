@@ -1,5 +1,7 @@
-$(document).ready(function(){
-
+$(document).ready(function() {
+  setTimeout(function() {
+    $("body").addClass("active");
+  }, 3000); // 3000 milliseconds = 3 seconds
 
   var csvUrl = "https://raw.githubusercontent.com/kevinthegoose/7-99waystodie/main/spelunkycsv.csv"
 
@@ -29,10 +31,7 @@ $(document).ready(function(){
     $("#images").append("<img src='" + skinImage + "' alt='Skin Image'>");
     $("#images").append("<img src='" + deathImage + "' alt='Death Image'>");
     
-    $(document).ready(function() {
-  setTimeout(function() {
-    $("body").addClass("active");
-  }, 3000); // 3000 milliseconds = 3 seconds
+    
 });
  });
 });
