@@ -16,7 +16,7 @@ $(document).ready(function(){
     var runLength = randomRow[headers.indexOf("Run Length")];
     
     // Create the text to display
-    var text = "Dan died on " + date + " on Run #" + runNumber + " on Floor #" + floorNumber + " because of the Piece of Piece " + deathCause + ". Dan was using the " + skin + " Skin and the run took " + runLength + " before Dan met his final demise";
+    var text = "Dan died on " + date + " on Run # " + runNumber + " on Floor # " + floorNumber + " because of the Piece of Piece " + deathCause + ". Dan was using the " + skin + " Skin and the run took " + runLength + " before Dan met his final demise";
     
     // Append the text to the 'attempt' div
     $("#attempt").append("<p>" + text + "</p>");
