@@ -31,7 +31,7 @@ $(document).ready(function() {
     // create a button element with CSS
     var button = document.createElement("button");
     button.innerHTML = "Show Me Another Random Death";
-    button.style.marginTop = "300px";
+    button.style.marginTop = "100px";
     button.style.transition = "opacity 5s ease-in-out";
     button.style.opacity = "0";
     button.style.color = "red";
