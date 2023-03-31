@@ -51,7 +51,7 @@ $(document).ready(function() {
       setTimeout(function() {
         button.style.opacity = "1";
       }, 1000);
-    }, 3000);
+    }, 1000);
 
   });
   
