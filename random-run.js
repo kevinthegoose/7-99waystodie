@@ -35,7 +35,12 @@ $(document).ready(function() {
     button.style.transition = "opacity 5s ease-in-out";
     button.style.opacity = "0";
     button.style.color = "red";
-
+    button.style.padding = "10px 20px";
+    button.style.borderRadius = "4px";
+    button.style.backgroundColor = "#333";
+    button.style.fontSize = "16px";
+    button.style.cursor = "pointer";
+    
     // add a click event listener to refresh the page
     button.addEventListener("click", function() {
       location.reload();
