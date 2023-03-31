@@ -34,6 +34,7 @@ $(document).ready(function() {
     button.style.marginTop = "300px";
     button.style.transition = "opacity 5s ease-in-out";
     button.style.opacity = "0";
+    button.style.color = "red";
 
     // add a click event listener to refresh the page
     button.addEventListener("click", function() {
