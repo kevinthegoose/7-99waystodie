@@ -50,8 +50,8 @@ $(document).ready(function() {
       // fade in the button with delay
       setTimeout(function() {
         button.style.opacity = "1";
-      }, 1000);
-    }, 1000);
+      }, 100);
+    }, 500);
 
   });
   
