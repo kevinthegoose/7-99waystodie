@@ -37,9 +37,11 @@ $(document).ready(function() {
     button.style.color = "red";
     button.style.padding = "10px 20px";
     button.style.borderRadius = "4px";
-    button.style.backgroundColor = "#fff";
+    button.style.backgroundColor = "#000000";
     button.style.fontSize = "16px";
     button.style.cursor = "pointer";
+    button.style.fontWeight = "bold";
+    button.style.fontFamily = "Impact,Charcoal,sans-serif";
     
     // add a click event listener to refresh the page
     button.addEventListener("click", function() {
