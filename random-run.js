@@ -18,7 +18,7 @@ $(document).ready(function() {
     var text = "Dan died on <span class='highlight'>" + date + "</span> on Run # <span class='highlight'>" + runNumber + "</span> on Floor # <span class='highlight'>" + floorNumber + "</span> because of the Piece of Piece <span class='highlight'>" + deathCause + "</span>. Dan was using the <span class='highlight'>" + skin + "</span> Skin and the run took <span class='highlight'>" + runLength + "</span> before Dan met his final demise";
     
     // Append the text to the 'attempt' div
-    $("#attempt").append("<p>" + text + "</p>").hide().delay(1000).fadeIn();
+    $("#attempt").append("<p>" + text + "</p>").hide().delay(1000).fadeIn(3000);
 
     // Extract image URLs
     var skinImage = randomRow[headers.indexOf("Skin Image")];
@@ -32,7 +32,7 @@ $(document).ready(function() {
     var button = document.createElement("button");
     button.innerHTML = "Show Me Another Random Death";
     button.style.marginTop = "300px";
-    button.style.transition = "opacity 2s ease-in-out";
+    button.style.transition = "opacity 5s ease-in-out";
     button.style.opacity = "0";
 
     // add a click event listener to refresh the page
