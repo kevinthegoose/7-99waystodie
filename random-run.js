@@ -25,28 +25,32 @@ $(document).ready(function() {
     var deathImage = randomRow[headers.indexOf("Cause of Run End Image")];
     
     // Append images to the 'images' div with fade in effect and 2 seconds delay
-    $("#images").append("<img src='" + skinImage + "' alt='Skin Image'>").hide().delay(1500).fadeIn(5);
-    $("#images").append("<img src='" + deathImage + "' alt='Death Image'>").hide().delay(2000).fadeIn();
+    $("#images").append("<img src='" + skinImage + "' alt='Skin Image'>").hide().delay(1500).fadeIn(5000);
+    $("#images").append("<img src='" + deathImage + "' alt='Death Image'>").hide().delay(2000).fadeIn(5000);
     
+    // create a button element with CSS
+    var button = document.createElement("button");
+    button.innerHTML = "Show Me Another Random Death";
+    button.style.marginTop = "300px";
+    button.style.transition = "opacity 2s ease-in-out";
+    button.style.opacity = "0";
 
+    // add a click event listener to refresh the page
+    button.addEventListener("click", function() {
+      location.reload();
+    });
 
-  // create a button element
-  var button = document.createElement("button");
-  button.innerHTML = "Show Me Another Random Death";
-  
-  // add a click event listener to refresh the page
-  button.addEventListener("click", function() {
-    location.reload();
-  });
-  
-  // set a timeout to display the button after 3 seconds
-  setTimeout(function() {
-    // get the container element
-    var container = document.querySelector(".container");
-    // add the button to the container
-    container.appendChild(button);
-  }, 3000);
-
+    // set a timeout to display the button after 3 seconds
+    setTimeout(function() {
+      // get the container element
+      var container = document.querySelector(".container");
+      // add the button to the container
+      container.appendChild(button);
+      // fade in the button with delay
+      setTimeout(function() {
+        button.style.opacity = "1";
+      }, 1000);
+    }, 3000);
 
   });
   
