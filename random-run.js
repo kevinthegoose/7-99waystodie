@@ -40,7 +40,6 @@ $(document).ready(function() {
     button.style.backgroundColor = "#000000";
     button.style.fontSize = "16px";
     button.style.cursor = "pointer";
-    button.style.fontWeight = "bold";
     button.style.fontFamily = "Impact,Charcoal,sans-serif";
     
     // add a click event listener to refresh the page
