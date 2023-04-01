@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Spelunky Run</title>
     <style>
       body {
@@ -12,29 +12,28 @@
         text-align: center;
         padding-top: 10px; 
       }
-   
-      #attempt {
-        max-width: 800px;
-        margin: 0 auto;
+      
+      #images-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
       
-   #images-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#images {
-  margin-top: 20px;
-  display: flex;
-}
-
-#images img {
-  margin-right: 20px;
-  width: 288px;
-  height: 406px;
-}
+      #images {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      #images img {
+        margin-right: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+      }
       
       .highlight {
         color: #FF0000;
@@ -48,18 +47,9 @@
         min-height: 100vh;
         flex-direction: column
       }
-
-
-.fadeIn {
-  animation-name: fadeInAnimation;
-  animation-duration: 2s; /* <-- change this value */
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both;
-}
-
-
-
-   .button {
+      
+      .button {
+        margin-top: 20px;
         background-color: #fff;
         color: #333;
         border: none;
@@ -71,7 +61,20 @@
       .button:hover {
         background-color: #333;
         color: #fff;
-
+      }
+      
+      @media screen and (min-width: 768px) {
+        #images img {
+          margin-right: 20px;
+          margin-bottom: 0;
+          width: 288px;
+          height: 406px;
+        }
+        
+        .button {
+          margin-top: 600px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -79,15 +82,14 @@
     <div class="container">
       <div id="attempt"></div>
       <br>
-      <div id="images"></div>
+      <div id="images-container">
+        <div id="images"></div>
+      </div>
+      <button class="button">Play Again</button>
     </div>
-
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
     <script src="random-run.js"></script>
-    
-    
-  
   </body>
 </html>
