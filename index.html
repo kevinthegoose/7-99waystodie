@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-   
     <title>Spelunky Run</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
       body {
         background-color: #333;
@@ -10,36 +10,41 @@
         font-family: "Impact", sans-serif;
         font-size: 24px;
         text-align: center;
-        padding-top: 10px; 
+        padding-top: 10px;
+        margin: 0;
       }
-   
+
       #attempt {
-        max-width: 100%;
+        max-width: 800px;
         margin: 0 auto;
+        margin-top: 50px;
       }
-      
+
       #images-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
       }
-      
+
       #images {
         margin-top: 20px;
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       #images img {
         margin-right: 20px;
+        margin-bottom: 20px;
         width: 288px;
         height: 406px;
       }
-      
+
       .highlight {
         color: #FF0000;
       }
-      
+
       .container {
         background-color: #333;
         display: flex;
@@ -65,19 +70,11 @@
         font-size: 20px;
         cursor: pointer;
       }
-      
+
       .button:hover {
         background-color: #333;
         color: #fff;
       }
-      
-      /* Media query for larger screens */
-      @media screen and (min-width: 768px) {
-        #attempt {
-          max-width: 800px;
-        }
-      }
-
     </style>
   </head>
   <body>
@@ -85,13 +82,13 @@
     <div class="container">
       <div id="attempt"></div>
       <br>
-      <div id="images"></div>
+      <div id="images-container">
+        <div id="images"></div>
+      </div>
     </div>
-
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
     <script src="random-run.js"></script>
-    
   </body>
 </html>
